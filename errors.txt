@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/chp1.rpy", line 60: expected statement.
+    memu:
+        ^
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Wed Jul 30 17:23:52 2025
