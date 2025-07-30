@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/chp1.rpy", line 60, in script
+    menu:
+  File "game/chp1.rpy", line 61, in <module>
+    set seen_set
+NameError: name 'seen_set' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/chp1.rpy", line 60, in script
+    menu:
+  File "/Applications/renpy-8.3.7-sdk/renpy/ast.py", line 1632, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "/Applications/renpy-8.3.7-sdk/renpy/exports/menuexports.py", line 74, in menu
+    set = renpy.python.py_eval(set_expr) # @ReservedAssignment
+  File "/Applications/renpy-8.3.7-sdk/renpy/python.py", line 1218, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Applications/renpy-8.3.7-sdk/renpy/python.py", line 1211, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/chp1.rpy", line 61, in <module>
+    set seen_set
+NameError: name 'seen_set' is not defined
+
+macOS-15.5-arm64-arm-64bit arm64
+Ren'Py 8.3.7.25031702
+SpaceOdyssey 1.0
+Wed Jul 30 17:39:25 2025

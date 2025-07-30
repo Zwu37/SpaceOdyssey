@@ -57,24 +57,26 @@ label chp2:
 
 label choice:
     $ save_name = "Question Menu"
+
     menu:
-        set seen_set
-        "Go help the person"
-        jump continue_chp2
-        "Turn around and leave"
-        jump continue_chp2
+        "Go help the person":
+            jump continue_chp2
+
+        "Turn around and leave":
+            jump continue_chp2
 
 label continue_chp2:
-    "I have half a mind to ignore it and just walk away. \nMy legs, as if they had a mind of their own, move forward before I can convince myself to look away."
-    "Okay, we\’re doing this, I guess."
+    "I have half a mind to ignore it and just walk away.\nMy legs, as if they had a mind of their own, move forward before I can convince myself to look away."
+    "Okay, we're doing this, I guess."
     "In two strides, I close the distance between me and this struggling person."
-    "{size=*2}{b}/n“Hey! Are you okay?/n”{size=*2}{b}"
-    "My voice comes out shaky and strained. It startles me—strange, unfamiliar, like it belongs to someone else. \nI haven\’t spoken out loud in months."
-    "My brother was killed in the initial attack. \nMy parents? Called to the frontline. Communication lines died the day our world fell apart."
+    "{size=*2}{b}“Hey! Are you okay?”{/b}{/size}"
+    "My voice comes out shaky and strained. It startles me—strange, unfamiliar, like it belongs to someone else.\nI haven't spoken out loud in months."
+    "My brother was killed in the initial attack.\nMy parents? Called to the frontline. Communication lines died the day our world fell apart."
     "With that and my parents gone, there was no one left to talk to."
-    "Now is not the time to whine Orius! I grit my teeth while moving the slab."
-    "\“Please help my baby,\” the voice says."
+    "Now is not the time to whine, Orius! I grit my teeth while moving the slab."
+    "\"Please help my baby,\" the voice says."
     "Baby?"
+
 
 
     
