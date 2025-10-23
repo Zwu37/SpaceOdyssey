@@ -1,30 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/chp1.rpy", line 60, in script
-    menu:
-  File "game/chp1.rpy", line 61, in <module>
-    set seen_set
-NameError: name 'seen_set' is not defined
+  File "game/script.rpy", line 551, in script
+    "*Bang*" play sound "audio/bang.mp3"
+  File "renpy/common/00library.rpy", line 330, in say
+    who(what, interact=interact, *args, **kwargs)
+Exception: Say has image attributes ('play', 'sound'), but there's no image tag associated with the speaking character.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/chp1.rpy", line 60, in script
-    menu:
-  File "/Applications/renpy-8.3.7-sdk/renpy/ast.py", line 1632, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "/Applications/renpy-8.3.7-sdk/renpy/exports/menuexports.py", line 74, in menu
-    set = renpy.python.py_eval(set_expr) # @ReservedAssignment
-  File "/Applications/renpy-8.3.7-sdk/renpy/python.py", line 1218, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Applications/renpy-8.3.7-sdk/renpy/python.py", line 1211, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/chp1.rpy", line 61, in <module>
-    set seen_set
-NameError: name 'seen_set' is not defined
+  File "game/script.rpy", line 551, in script
+    "*Bang*" play sound "audio/bang.mp3"
+  File "/Applications/renpy-8.3.7-sdk/renpy/ast.py", line 2586, in execute
+    Say.execute(self)
+  File "/Applications/renpy-8.3.7-sdk/renpy/ast.py", line 623, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Applications/renpy-8.3.7-sdk/renpy/exports/sayexports.py", line 130, in say
+    renpy.store.say(who, what, *args, **kwargs)
+  File "renpy/common/00library.rpy", line 330, in say
+    who(what, interact=interact, *args, **kwargs)
+  File "/Applications/renpy-8.3.7-sdk/renpy/character.py", line 1407, in __call__
+    old_attr_state = self.handle_say_attributes(False, interact)
+  File "/Applications/renpy-8.3.7-sdk/renpy/character.py", line 1223, in handle_say_attributes
+    if self.resolve_say_attributes(predicting, attrs):
+  File "/Applications/renpy-8.3.7-sdk/renpy/character.py", line 1149, in resolve_say_attributes
+    raise Exception("Say has image attributes %r, but there's no image tag associated with the speaking character." % (attrs,))
+Exception: Say has image attributes ('play', 'sound'), but there's no image tag associated with the speaking character.
 
-macOS-15.5-arm64-arm-64bit arm64
+macOS-15.6.1-arm64-arm-64bit arm64
 Ren'Py 8.3.7.25031702
 SpaceOdyssey 1.0
-Wed Jul 30 17:39:25 2025
+Wed Oct  8 14:11:35 2025

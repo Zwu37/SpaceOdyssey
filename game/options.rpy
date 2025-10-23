@@ -157,6 +157,8 @@ define config.window_icon = "gui/window_icon.png"
 ##
 ## This section controls how Ren'Py turns your project into distribution files.
 
+
+
 init python:
 
     ## The following functions take file patterns. File patterns are case-
